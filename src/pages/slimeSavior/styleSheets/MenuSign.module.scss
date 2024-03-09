@@ -1,0 +1,86 @@
+.startContainer,
+.rulesContainer{
+    z-index: 2;
+    position: sticky;
+    padding-left: 40px;
+    padding-top: 40px;   
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.playAgainContainer{  
+    z-index: 21;  
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 35vh;
+    padding-right: 20vw;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.356) 0%, rgba(0, 0, 0, 0.034) 60%, rgba(255, 255, 255, 0) 100%);
+    
+
+    
+    
+    
+    
+    
+}
+
+.decorationOfSelected{
+    opacity: 0;    
+    margin-right: 2vw;
+    margin-left: 2vw;
+    height: 9vh;
+    
+}
+
+.startSigncontainer,
+.rulesSignContainer,
+.playAgainSignContainer{    
+    min-width: 138px;
+    
+}
+
+.startSign,
+.rulesSign{
+    height: 6vh;
+    width: 14vw;
+    cursor: url("../sources/cursor2.png"),auto;
+}
+.playAgainSign{
+    height: 20vh;
+    cursor: url("../sources/cursor2.png"),auto;
+}
+ 
+
+@media (max-width: 800px) {
+    .playAgainContainer{
+        height: 80vh;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .playAgainSign{
+        height: 17vh;
+    }
+
+    .startContainer, .rulesContainer{
+        padding-left: 0;
+        padding-top: 10vh;
+        
+    }
+    .startSign, .rulesSign{
+
+        width: 20vw;
+    }
+
+    .decorationOfSelected{
+        width: 12vw;
+    }
+}

@@ -1,0 +1,204 @@
+@font-face {
+    font-family: "Alfa-Slab-One";
+    src: url("../assets/fonts/AlfaSlabOne-Regular.ttf");  
+}
+@font-face {
+    font-family: "NotoSans-SemiBoldItalic";
+    src: url("../assets/fonts/NotoSans-SemiBoldItalic.ttf");  
+}
+@font-face {
+    font-family: "PassionOne-Bold";
+    src: url("../assets/fonts/PassionOne-Bold.ttf");
+  
+}
+
+
+
+.contactMeContainer{
+    position: relative;
+    width: 100vw;
+    height: 110vh;
+}
+
+.contactmeBackground{
+    height: 110vh;
+    position: absolute;    
+    z-index: -5;
+    width: 100vw;    
+}
+
+
+
+
+.formContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;
+    justify-content: center;
+    justify-items: center;
+    padding-top: 35vh;
+    padding-left: 35vw;
+    h3{
+        font-family: "Alfa-Slab-One";
+        text-shadow: 2px 2px 4px  rgb(0, 0, 0), 0px -2px 20px  rgb(0, 0, 0);        
+        font-size: 2.9vw;
+        color: #ffffff;
+        margin-bottom: 1.5vw;
+    }
+    
+}
+
+.inputLabelGroup{
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 18px;
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.589);
+}
+
+.inputLabelGroup:has(> textarea) {
+    justify-content:start;
+}
+
+.inputLabelGroup label{
+    position: absolute;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: transform .4s, color .4s, margin .4s .6s;
+    color: #ACACAC;
+    text-shadow: 0px -2px 2px black;
+    outline: none;
+    font-family: "NotoSans-SemiBoldItalic";
+    
+    
+}
+
+.inputLabelGroup textarea{
+    resize: none;
+}
+
+
+
+@keyframes backgroundLabelAnimation {
+    
+    100%{
+        background: linear-gradient(to bottom, #24242400 54%, #3b3b3b 46%);
+    }
+}
+
+@keyframes paddingAnimation {
+    
+    100%{
+        padding-right: 2vw ;
+    }
+}
+
+
+.inputLabelGroup input {
+    height: 38px;    
+    width: 25vw;
+    display: flex;
+    color: rgb(221, 221, 221);    
+    &:focus{
+        border: 2px solid #3B6BEE;
+        border-radius: 3px;
+        outline: none;
+    }
+    &:focus + label, &:not(:placeholder-shown) + label{
+        transform: translateY(-19px) scale(.9);
+        transform-origin: top left;        
+        margin-left: 15px;
+        padding-left: 4px;
+        animation: backgroundLabelAnimation forwards .5s, paddingAnimation forwards .5s .7s;
+        color: #ffffff;
+    }
+}
+
+.inputLabelGroup textarea {
+    height: 18vh;
+    width: 25vw;
+    display: flex;
+    color: rgb(221, 221, 221);  
+    padding-top: 10px; 
+    padding-left: 3px;       
+    &:focus{
+        border: 2px solid #3B6BEE;        
+        border-radius: 3px;
+        outline: none;
+    }
+    &:focus + label, &:not(:placeholder-shown) + label{
+        transform: translateY(-11px) scale(.9);
+        transform-origin: top left;        
+        margin-left: 15px;
+        padding-left: 4px;
+        animation: backgroundLabelAnimation forwards .5s, paddingAnimation forwards .5s .7s; 
+        color: #ffffff;
+           
+    }
+}
+
+
+
+.submitButton{
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: "PassionOne-Bold";
+    width: 8vw;
+    background-color: #3B3B3B;
+    outline: none;
+    border: 1px solid rgb(180, 180, 180);
+    font-size: 1.5vw;
+    letter-spacing: 1px;
+    border-radius: 1px;
+    color: #A5A5A5;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.363);
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.404);
+    &:hover{
+        border: 1px solid rgb(255, 255, 255);
+        color: white;
+    }
+
+}
+
+
+.appreciationText{
+    font-family: "Alfa-Slab-One";
+    text-shadow: 4px 4px 12px rgb(0, 0, 0);
+    position: absolute;
+    width: 31vw;
+    height: 110vh;
+    text-wrap: balance;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 10vw;
+    color: #24afff;
+    z-index: -4;
+    background: 
+        linear-gradient( to bottom, 
+            rgba(0, 0, 0, 0.753) 0%, 
+            rgba(0, 0, 0, 0.753) 50%, 
+            rgba(0, 0, 0, 0.582) 65%, 
+            rgba(0, 0, 0, 0.301) 80%,
+            rgba(0, 0, 0, 0) 100%,
+
+        ), 
+        linear-gradient(to right , 
+            rgb(0, 0, 0) 0%, 
+            rgba(0, 0, 0, 0) 45%,
+            rgba(0, 0, 0, 0) 100%,
+        );
+    
+    h1{
+        margin-left: 2vw;
+        font-size: 3.5vw;
+    }
+    h2{
+        margin-left: 6vw;
+        margin-top: 0;
+    }
+        
+}
+
+

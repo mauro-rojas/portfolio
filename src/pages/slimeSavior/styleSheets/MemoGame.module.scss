@@ -1,0 +1,92 @@
+.fichasContainer{
+    position: relative;
+    z-index: 10;
+    display: grid;
+    justify-content: end;
+    grid-template-columns: repeat(5, minmax(auto, 100px));
+    gap: 25px;
+    padding-top: 16vh;
+    padding-right: 8vw; 
+    width: 40vw;
+    float: right;
+    
+    
+}
+
+.ficha{
+    list-style-type: none;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(53, 33, 87, 0.329), rgba(252, 215, 164, 0.829));
+    max-width: 110px;
+    height: 11vh;
+    width: 8vw;
+    cursor: url("../sources/cursor2.png"), auto;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 8px;
+}
+
+.fichaImagen{
+    height: 8vh;
+    cursor: url("../sources/cursor2.png"), auto;
+
+}
+
+.fichaReverso{
+    height: 11vh;
+    width: 8vw;
+    max-width: 110px;
+    padding: 15px 10px 15px 10px ;
+    background-color: rgba(138, 57, 192, 0.637);
+    border-radius: 8px;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+
+
+@media (max-width: 800px) {
+
+    .fichasContainer{
+        padding: 0;
+        padding-top: 5vh;
+        float: none;
+        width: 100vw;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(4, minmax(auto, 49px));
+        justify-items: center;
+        gap: 2.5vw;
+    }
+
+    .ficha, .fichaReverso{
+        height: 8.5vh;
+        width: 16vw;  
+        max-width: 81px;   
+    }
+
+    .fichaReverso{
+        padding: 1vw 2vw 1vw 2vw;
+    }
+
+    .fichaImagen{
+        height: 5vh;
+    }
+    
+}
+
+@media (width > 1200px) {
+
+    .ficha, .fichaReverso{
+        width: 7vw;
+        height: 14vh;  
+             
+    }
+
+    .fichasContainer{
+        margin-bottom: 100px;
+        gap: 13px;
+        padding-top: 9vh;
+    }
+
+}

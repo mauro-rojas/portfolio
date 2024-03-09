@@ -1,0 +1,26 @@
+.backgroundContainer{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.backgroundContainer img{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    
+}
+
+@media (max-width: 800px) {
+
+    .backgroundContainer img{
+        transform: 
+            translateX(-15vw)
+            translateY(-10vh) 
+            scaleX(2)
+            scaleY(1.3)            
+        ;
+    }
+
+}

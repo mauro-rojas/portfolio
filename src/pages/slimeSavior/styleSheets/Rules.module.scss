@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "Upheaval";
+    src: url("../fonts/upheavtt.ttf");
+}
+
+.rules{
+    z-index: 5;
+    position:fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;    
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+
+
+
+.rulesText{
+    font-family: "Upheaval";
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    color: antiquewhite; 
+    position: relative;
+    padding: 5vh;
+    padding-top: 50px;
+    overflow: auto;
+    background-color: rgb(37, 18, 53);
+    height: 50vh;
+    width: 54vw;
+    border: solid 10px rgb(37, 18, 53);
+    border-radius: 10px;
+    text-wrap: balance;
+    
+}
+
+.rulesText::-webkit-scrollbar{
+    width: 1vw;
+    height: 0px;
+    
+}
+.rulesText::-webkit-scrollbar-thumb{
+    background-color: rgb(224, 111, 36);
+    
+    
+    
+    
+    
+}
+
+.closeButton{
+    height: 20px;
+    width: 20px;
+    margin-bottom: 10px; 
+    display: flex;
+    align-self: flex-end;
+    cursor: url("../sources/cursor2.png"),auto;
+}
+
+.especialText{
+    display: flex;
+    align-items: center;
+    
+}
+
+.especialText p{
+    text-wrap: balance;
+}
+
+.especialText img {
+    margin-right: 12px;
+}
+
+
+
+@media (width < 800px) {
+    .rulesText{
+        margin: 0;
+        width: 90vw;
+    }
+    .closeButton{
+        margin: 0;
+        margin-bottom: 2px;
+    }
+
+    .rulesText::-webkit-scrollbar{
+        width: 2vw;
+    }
+}

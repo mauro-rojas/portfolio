@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "Alfa-Slab-One";
+    src: url("../assets/fonts/AlfaSlabOne-Regular.ttf");
+  
+}
+@font-face {
+    font-family: "PassionOne-Bold";
+    src: url("../assets/fonts/PassionOne-Bold.ttf");
+  
+}
+
+
+.landingPageContainer{  
+    position: relative;
+    width: 100vw;
+    height: 83vw;    
+}
+
+.landingPageBackground{
+    width: 100vw;
+    position: absolute;
+    z-index: -2;
+    
+}
+
+.landingPageText{      
+    font-family: "Alfa-Slab-One"; 
+    height: 100vh;
+    width: 55dvw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;    
+    color: rgb(255, 255, 255); 
+    text-shadow: 4px 4px 10px rgb(40, 0, 85);
+    h1, h2{
+        letter-spacing: 1px;
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        font-size: 4.5vw;
+        line-height: 1;
+    }
+    h2{
+        font-size: 2.3vw;
+    }
+}
+
+.subtitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.buttonsContainer{
+    font-family: "PassionOne-Bold";  
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    width: 100vw;
+    margin-top: 15vw;
+    button{
+        margin: 3.5vw;
+        height: 3vw;
+        min-height: 25px;
+        padding: 5px 15px;
+        border-radius: 20px;
+        background: #ffffff;        
+        color: #400161;
+        transition: transform 0.2s ease-in-out;
+        box-shadow: -2px 4px 10px black;
+        font-size: clamp(12px, 1.3vw, 30px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color color ease .1s;
+    }
+    
+}
+
+
+
+
+

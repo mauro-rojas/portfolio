@@ -1,0 +1,37 @@
+.slimeContainer{
+    position: relative;
+    z-index: 9;
+    width: 45vw;
+    height: 56vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-left: 3.5vw;
+}
+
+.slime{
+    height: 40vh;
+}
+
+
+
+
+@media (width < 800px) { 
+
+    .slimeContainer{
+        padding-left: 38.5vw;
+        padding-top: 79vh;
+        align-items: normal;
+        width: 95vw;
+        height: 20vh;
+        padding: 0;
+        position: absolute;
+        bottom: 23vh;
+    }
+
+    .slime{
+        height: 20vh;
+    }
+
+}
+

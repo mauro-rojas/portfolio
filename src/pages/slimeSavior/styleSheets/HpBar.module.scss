@@ -1,0 +1,112 @@
+.hpBarContainer{
+    position: relative;
+    z-index: 9;
+    height: 20vh;
+    width: 47vw;
+    display: flex;
+    padding-top: 11vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.hpBar{
+    width: 30vw;   
+    position: fixed;
+    
+}
+
+
+
+.healthContainer{
+    position: absolute;
+    height: 3.3vw;    
+    width: 24.3vw;
+    margin-left: 3px;
+}
+
+.fullHp{
+    position: absolute;
+    z-index: 12;
+    height: 3.3vw;
+    transition : width  1.3s ease 0s;
+    background: linear-gradient(to right,
+                                                 rgba(35, 255, 76, 0.6) 0%,
+                                                 rgba(95, 255, 116, 0.7) 50%,  
+                                                 rgb(215, 255, 180)100%);
+    
+    
+}
+
+.halfHp{
+    position: absolute;
+    z-index: 12;
+    height: 3.3vw;
+    transition : width  1.3s ease 0s;
+    background: linear-gradient(to right,
+                                                 rgba(255, 116, 24, 0.808) 0%,
+                                                 rgba(255, 198, 93, 0.74) 60%,  
+                                                 rgb(255, 238, 180)100%);
+    
+    
+}
+
+.lowHp{
+    position: absolute;
+    z-index: 12;
+    height: 3.3vw;
+    transition : width  1.3s ease 0s;
+    background: linear-gradient(to right,
+                                                 rgba(255, 35, 35, 0.6) 0%,
+                                                 rgba(255, 140, 95, 0.7) 50%,  
+                                                 rgb(255, 191, 180)100%);
+    
+    
+}
+
+.healthShadow{
+    position: absolute;
+    z-index: 11;
+    height: 3.3vw;
+    transition : width  0.7s ease 0.8s;
+    background: linear-gradient(to right,
+                                                 rgba(8, 109, 42, 0) 0%,
+                                                 rgba(24, 163, 77, 0) 35%,  
+                                                 rgba(63, 20, 82, 0.349) 100%);
+}
+
+
+
+@media (width < 800px) {
+    .hpBarContainer{
+        /* position: fixed;
+        padding-top: 32vh;
+        padding-left: 50vw; */
+        position: absolute;
+        bottom: 4vw;
+        right: 28vw;
+    }
+
+    .hpBar{
+        width: 65vw;
+        max-width: 377px;
+    }
+
+    .healthContainer{
+        height: 7.3vw;
+        width: 53vw;
+        max-width: 306px;
+        max-height: 44px;
+    }
+
+    .fullHp, .healthShadow, .halfHp, .lowHp {
+        height: 7.3vw;
+        width: 53vw;
+        max-height: 44px;
+    }
+
+    
+    
+}
+
+
