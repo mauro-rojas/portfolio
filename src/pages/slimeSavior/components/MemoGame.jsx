@@ -34,6 +34,9 @@ let fichasAnimaciones ={
     hidden :{opacity:0, x:-200, y: -200},
     visible:{opacity:1, x:0, y:0},
     mixed:{
+        opacity:1,
+        x:0,
+        y:0,
         rotate: [0, 1080],
     }
 }

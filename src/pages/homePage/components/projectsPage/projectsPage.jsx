@@ -26,9 +26,53 @@ import viteIcon from "../../assets/technologiesIcons/Vite.svg"
 import openweathermapIcon from "../../assets/technologiesIcons/openweathermapIcon.webp"
 
 import ProjectCard from "./projectCard";
+import { useEffect, useState } from "react";
+
 
 
 function ProjectsPage(){
+
+    const [imgRef, setImgRef] = useState([]);
+    const [originalAnimationProjectView, setOriginalAnimationProjectView] = useState(null);
+     
+
+    function sync(ref, originalAnimation) {
+        //asi me aseguro que se guarden bien los valores aunque se rendericen simultaneamente
+        setImgRef(prevImgRef => {
+            // Create a copy of the previous state array
+            const newImgRef = [...prevImgRef];
+            // Add the new ref to the array
+            newImgRef.push(ref);
+            // If originalAnimationProjectView is not set, update it
+            if (!originalAnimationProjectView) {
+                setOriginalAnimationProjectView(originalAnimation);
+            }
+            // Return the updated array
+            return newImgRef;
+        });
+    }
+
+    useEffect(() => {
+        //console.log(imgRef);
+        if(imgRef.length > 1){
+            console.log("es mayor a 1");
+            for (let index = 0; index < imgRef.length-1; index++) {  
+                console.log(imgRef[index]);              
+                imgRef[index].current.style.animation = "none";
+                // el offsetwidth hace que se resetee la animacion supuestamente porque fuerza 
+                // una recalculacion de estilos
+                void imgRef[index].current.offsetWidth;
+                // Para restaurar la animación a su valor original
+                imgRef[index].current.style.animation = originalAnimationProjectView;
+                
+                
+                
+            }
+        }
+        
+        
+    }, [imgRef]);
+    
 
     return(
         <div className={styles.projects}>            
@@ -47,6 +91,7 @@ function ProjectsPage(){
                                 {imageUrl: sassIcon, name: "sass"},
                                 {imageUrl: viteIcon, name: "vite"}
                             ]}
+                            sync = {sync}
                         />
                     </div>
                     <div className={styles.projectCard}>
@@ -63,6 +108,7 @@ function ProjectsPage(){
                                 {imageUrl: reactChartjs2Icon, name: "react chartjs 2"},
                                 {imageUrl: openweathermapIcon, name: "open weather map Api"},
                             ]}
+                            sync = {sync}
                         />
                     </div>
                     <div className={styles.projectCard}>
@@ -72,6 +118,7 @@ function ProjectsPage(){
                             // linkTo="/clima"
                             altImg="Texto alternativo de la imagen"
                             //technologies={}
+                            sync = {sync}
                         />
                     </div>
                     <div className={styles.projectCard}>
@@ -81,6 +128,7 @@ function ProjectsPage(){
                             //linkTo="/clima"
                             altImg="Texto alternativo de la imagen"
                             //technologies={}
+                            sync = {sync}
                         />
                     </div>
                 </div>                
