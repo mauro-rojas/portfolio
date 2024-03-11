@@ -5,14 +5,14 @@ import { motion } from "framer-motion";
 import { useAnimate, useInView } from "framer-motion"
 import { useEffect, useRef, useState } from "react";
 
-function ProjectCard ({text, img, linkTo, altImg, technologies, sync  }){
+function ProjectCard ({text, img, linkTo, altImg, technologies, syncAnimation  }){
 
     const [seen, setSeen] = useState(false);
 
     const inViewRef = useRef(null);
     const imgRef = useRef(null);
     const linkRef = useRef(null);
-    const isInView = useInView(inViewRef);    
+    const isInView = useInView(inViewRef, { once: true });    
 
     const animateIn = {
         opacity: 1,
@@ -60,7 +60,7 @@ function ProjectCard ({text, img, linkTo, altImg, technologies, sync  }){
 
                                 // // Para restaurar la animación a su valor original
                                 // imgRef.current.style.animation = originalAnimation;   
-                                sync(imgRef, originalAnimation);                          
+                                syncAnimation(imgRef, originalAnimation);                          
                             }
                         }}                                                
                     />

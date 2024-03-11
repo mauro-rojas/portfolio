@@ -49,19 +49,20 @@
     
 }
 
-.inputLabelGroup{
+.fieldLabelGroup{
     display: flex;    
     flex-direction: column;
     justify-content: center;
     margin-bottom: 18px;
     box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.589);
+    user-select: none;
 }
 
-.inputLabelGroup:has(> textarea) {
+.fieldLabelGroup:has(> textarea) {
     justify-content:start;
 }
 
-.inputLabelGroup label{
+.fieldLabelGroup label{
     position: absolute;
     cursor: pointer;
     margin-left: 10px;
@@ -74,7 +75,7 @@
     
 }
 
-.inputLabelGroup textarea{
+.fieldLabelGroup textarea{
     resize: none;
 }
 
@@ -95,11 +96,12 @@
 }
 
 
-.inputLabelGroup input {
+.fieldLabelGroup input {
     height: 38px;    
     width: 25vw;
     display: flex;
-    color: rgb(221, 221, 221);    
+    color: rgb(221, 221, 221);
+    border: 1px solid #ACACAC;        
     &:focus{
         border: 2px solid #3B6BEE;
         border-radius: 3px;
@@ -115,7 +117,7 @@
     }
 }
 
-.inputLabelGroup textarea {
+.fieldLabelGroup textarea {
     height: 18vh;
     width: 25vw;
     display: flex;
@@ -145,10 +147,11 @@
     cursor: pointer;
     font-family: "PassionOne-Bold";
     width: 8vw;
+    height: 38px;
     background-color: #3B3B3B;
     outline: none;
     border: 1px solid rgb(180, 180, 180);
-    font-size: 1.5vw;
+    font-size: 0.9vw;
     letter-spacing: 1px;
     border-radius: 1px;
     color: #A5A5A5;
@@ -173,7 +176,7 @@
     flex-direction: column;
     justify-content: center;
     left: 10vw;
-    color: #24afff;
+    color: #24afff; 
     z-index: -4;
     background: 
         linear-gradient( to bottom, 

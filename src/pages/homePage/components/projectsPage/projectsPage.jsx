@@ -36,7 +36,7 @@ function ProjectsPage(){
     const [originalAnimationProjectView, setOriginalAnimationProjectView] = useState(null);
      
 
-    function sync(ref, originalAnimation) {
+    function syncAnimation(ref, originalAnimation) {
         //asi me aseguro que se guarden bien los valores aunque se rendericen simultaneamente
         setImgRef(prevImgRef => {
             // Create a copy of the previous state array
@@ -53,10 +53,11 @@ function ProjectsPage(){
     }
 
     useEffect(() => {
+        //para sincronizar las animaciones de las img de projects
         //console.log(imgRef);
         if(imgRef.length > 1){
             console.log("es mayor a 1");
-            for (let index = 0; index < imgRef.length-1; index++) {  
+            for (let index = 0; index < imgRef.length; index++) {  
                 console.log(imgRef[index]);              
                 imgRef[index].current.style.animation = "none";
                 // el offsetwidth hace que se resetee la animacion supuestamente porque fuerza 
@@ -64,9 +65,6 @@ function ProjectsPage(){
                 void imgRef[index].current.offsetWidth;
                 // Para restaurar la animación a su valor original
                 imgRef[index].current.style.animation = originalAnimationProjectView;
-                
-                
-                
             }
         }
         
@@ -91,12 +89,12 @@ function ProjectsPage(){
                                 {imageUrl: sassIcon, name: "sass"},
                                 {imageUrl: viteIcon, name: "vite"}
                             ]}
-                            sync = {sync}
+                            syncAnimation = {syncAnimation}
                         />
                     </div>
                     <div className={styles.projectCard}>
                         <ProjectCard 
-                            text="Web para consultar el clima."
+                            text="Web para consultar el clima y el pronostico semanal."
                             img={weatherProjectView}
                             linkTo="/clima"
                             altImg="Texto alternativo de la imagen"
@@ -108,7 +106,7 @@ function ProjectsPage(){
                                 {imageUrl: reactChartjs2Icon, name: "react chartjs 2"},
                                 {imageUrl: openweathermapIcon, name: "open weather map Api"},
                             ]}
-                            sync = {sync}
+                            syncAnimation = {syncAnimation}
                         />
                     </div>
                     <div className={styles.projectCard}>
@@ -118,7 +116,7 @@ function ProjectsPage(){
                             // linkTo="/clima"
                             altImg="Texto alternativo de la imagen"
                             //technologies={}
-                            sync = {sync}
+                            syncAnimation = {syncAnimation}
                         />
                     </div>
                     <div className={styles.projectCard}>
@@ -128,7 +126,7 @@ function ProjectsPage(){
                             //linkTo="/clima"
                             altImg="Texto alternativo de la imagen"
                             //technologies={}
-                            sync = {sync}
+                            syncAnimation = {syncAnimation}
                         />
                     </div>
                 </div>                
