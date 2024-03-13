@@ -3,12 +3,14 @@ import background from "../../assets/contactmeBackground.png"
 import { motion, useInView } from 'framer-motion';
 import { useEffect, useRef, useState } from "react";
 
-function Contactme(){
+function Contactme({setContactmeRef}){
 
     const [buttonSeen, setButtonSeen] = useState(false);
     const buttonRef = useRef(null);
     const buttonIsInView = useInView(buttonRef, { once: true });
-
+    const contactmeRef = useRef(null);
+    
+    const delayContactme = 3;
 
     useEffect(() => {
         //console.log(buttonSeen);
@@ -21,6 +23,10 @@ function Contactme(){
         
     }, [buttonIsInView]);
 
+    useEffect(() => {        
+        setContactmeRef(contactmeRef);
+    }, []);
+
     const AnimatedfieldLabelGroup = ({children}) => {
         return (        
             <motion.div className={styles.fieldLabelGroup}
@@ -29,7 +35,7 @@ function Contactme(){
                                 boxShadow: "none"                           
                             }}
                             animate={buttonSeen ? activeAnimation  : {}}                        
-                            transition={{ duration: 0.3,delay: 3, type: "spring",  stiffness: 900, damping: 33}}
+                            transition={{ duration: 0.3, delay: delayContactme, type: "spring",  stiffness: 900, damping: 33}}
             >   
             {children}         
             </motion.div>
@@ -50,7 +56,7 @@ function Contactme(){
                     textShadow:"",
                     pointerEvents: ""                               
                 }  : {}}                        
-                transition={{ duration: 0.3, delay: 3}}
+                transition={{ duration: 0.3, delay: delayContactme}}
             > 
                 {text}         
             </motion.label>
@@ -66,7 +72,7 @@ function Contactme(){
                 name= {name}                                 
                 initial={initial}
                 animate={buttonSeen ? animate  : {}}                        
-                transition={{ duration: 0.3, delay: 3  }}
+                transition={{ duration: 0.3, delay: delayContactme  }}
             />
         );
     }
@@ -82,7 +88,7 @@ function Contactme(){
 
 
     return(
-        <div className={styles.contactMeContainer}>            
+        <div className={styles.contactMeContainer} ref={contactmeRef}>            
             
             <img className={styles.contactmeBackground} src={background} alt="contactmeBackground" />
             
@@ -234,7 +240,7 @@ function Contactme(){
                                         backgroundColor:"",
                                         pointerEvents: "" 
                                     }  : {}}                        
-                                    transition={{ duration: 0.3, delay: 3  }}
+                                    transition={{ duration: 0.3, delay: delayContactme  }}
                                 />
                                 <AnimatedLabel
                                     htmlFor= "message"
@@ -266,7 +272,7 @@ function Contactme(){
                             backgroundColor:"",
                             pointerEvents: "" 
                         }  : {}}                        
-                        transition={{ duration: 0.2, delay: 3  }}
+                        transition={{ duration: 0.2, delay: delayContactme  }}
                     />
                 </form>
             </div>            

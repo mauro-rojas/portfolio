@@ -26,15 +26,15 @@ import viteIcon from "../../assets/technologiesIcons/Vite.svg"
 import openweathermapIcon from "../../assets/technologiesIcons/openweathermapIcon.webp"
 
 import ProjectCard from "./projectCard";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 
 
-function ProjectsPage(){
+function ProjectsPage({setProjectsPageRef}){
 
     const [imgRef, setImgRef] = useState([]);
     const [originalAnimationProjectView, setOriginalAnimationProjectView] = useState(null);
-     
+    const projectsPageRef = useRef(null);
 
     function syncAnimation(ref, originalAnimation) {
         //asi me aseguro que se guarden bien los valores aunque se rendericen simultaneamente
@@ -70,10 +70,14 @@ function ProjectsPage(){
         
         
     }, [imgRef]);
+
+    useEffect(() => {        
+        setProjectsPageRef(projectsPageRef);
+    }, []);
     
 
     return(
-        <div className={styles.projects}>            
+        <div className={styles.projects} ref={projectsPageRef}>            
                 <div className={styles.projectsBackground}>
                 </div>
                 <div className={styles.projectsCardContainer}>
@@ -94,7 +98,7 @@ function ProjectsPage(){
                     </div>
                     <div className={styles.projectCard}>
                         <ProjectCard 
-                            text="Web para consultar el clima y el pronostico semanal."
+                            text="Web para consultar el clima y el pronóstico semanal."
                             img={weatherProjectView}
                             linkTo="/clima"
                             altImg="Texto alternativo de la imagen"
