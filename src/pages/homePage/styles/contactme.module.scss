@@ -204,4 +204,26 @@
         
 }
 
+.errorMessage{
+    font-family: NotoSans-SemiBoldItalic;
+    width: auto;
+    color: rgb(37, 37, 37);
+    text-align: center;
+    
+    margin-bottom: 2vh;
+    background-color: rgb(255, 81, 81);
+    border-radius: 2px;
+    padding: 1vh 2vw;
+    border: 1px solid rgb(199, 199, 199);
+}
 
+.fieldLabelGroup .inputError{
+    border: 2px solid #FF5151;
+    border-radius: 2px;
+    
+}
+
+.fieldLabelGroup:has(> .inputError) {
+    margin-bottom: 6px !important;
+}
+    
