@@ -1,8 +1,13 @@
 import styles from "../../styles/contactme.module.scss"
 import background from "../../assets/contactmeBackground.png"
-import { motion, useInView } from 'framer-motion';
-import { forwardRef, useEffect, useRef, useState } from "react";
+import { AnimatePresence, motion, useInView } from 'framer-motion';
+import { useEffect, useRef, useState } from "react";
 import validateForm from "./validateForm";
+import sendEmail from "./sendEmail";
+import alienSticker from "../../assets/alienStickers/alienSticker22.png"
+import alienSticker2 from "../../assets/alienStickers/alienSticker3.png"
+
+
 
 function Contactme({setContactmeRef}){
 
@@ -11,19 +16,18 @@ function Contactme({setContactmeRef}){
     const buttonRef = useRef(null);
     const buttonIsInView = useInView(buttonRef, { once: true });
     
-    //const [delayContactme, setDelayContactme] = useState(3);
+    
     const delayContactme = 3;
-    // const emailInputRef = useRef(null);
-    // const nameInputRef = useRef(null);
-    // const messageInputRef = useRef(null);
+    
     
     const [errors, setErrors] = useState(null);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
+    const [succesEmail, setSuccesEmail] = useState(false);
+
     useEffect(() => {
-        //console.log(buttonSeen);
         
         if ((!buttonSeen) && (buttonIsInView)) {
             console.log("se vio el boton");
@@ -39,60 +43,6 @@ function Contactme({setContactmeRef}){
 
     
 
-    const AnimatedfieldLabelGroup = ({children}) => {
-        return (        
-            <motion.div className={styles.fieldLabelGroup}
-                            initial={{ 
-                                marginBottom: 0, 
-                                boxShadow: "none"                           
-                            }}
-                            animate={buttonSeen ? activeAnimation  : {}}                        
-                            transition={{ duration: 0.3, delay: delayContactme, type: "spring",  stiffness: 900, damping: 33}}
-            >   
-            {children}         
-            </motion.div>
-        );
-    };
-
-    const AnimatedLabel = ({htmlFor, text}) => {
-        return (        
-            <motion.label 
-                htmlFor= {htmlFor}
-                initial={{ 
-                    color: "#27272700",
-                    textShadow: "none",
-                    pointerEvents: "none"
-                }}
-                animate={buttonSeen ? { 
-                    color: "",  
-                    textShadow:"",
-                    pointerEvents: ""                               
-                }  : {}}                        
-                transition={{ duration: 0.3, delay: delayContactme}}
-            > 
-                {text}         
-            </motion.label>
-        );
-    }
-
-    const AnimatedInput = forwardRef(({type, id, name, initial, animate }, ref) => {
-        return ( 
-            <motion.input 
-                ref = {ref}
-                type= {type} 
-                id= {id} 
-                placeholder="" 
-                name= {name} 
-                autoComplete="off"                             
-                initial={initial}
-                animate={buttonSeen ? animate  : {}}                        
-                transition={{ duration: 0.3, delay: delayContactme  }}
-                
-                
-            />
-        );
-    });
-
     const activeAnimation = {
         marginBottom: "18px",
         boxShadow:"",
@@ -103,36 +53,70 @@ function Contactme({setContactmeRef}){
     
     function onSubmit (e) {
         e.preventDefault();       
-        //setDelayContactme(0);
-        //localStorage.clear();
-        
-        console.log("mando form");
-        
+        console.log("mando form");        
         const errors = validateForm(name, email, message);
-        setErrors(errors);
-        
-    }
-
-    useEffect(() => {        
+        setErrors(errors); 
         if(!errors){
-            
-        
-            console.log("sin errores");
+            console.log(name, email, message);
+            sendEmail(name, email, message, setSuccesEmail);
             setName("");
             setEmail("");
             setMessage("");
-            // si no hay errores mando mail  saco clase error de lso input
+            
         }
         else{
             console.log("hay error");
-        }
-    }, [errors]);
+            return false;
+        }     
+    }
+
 
     return(
         <div className={styles.contactMeContainer} ref={contactmeRef}>            
             
             <img className={styles.contactmeBackground} src={background} alt="contactmeBackground" />
-            
+            <AnimatePresence>
+                {
+                    succesEmail &&
+                    <motion.div className={styles.succesEmail}
+                        initial={{                                   
+                            backgroundColor: "#400161",
+                            position: "fixed",
+                            zIndex:"-2",
+                            clipPath: "circle(0% at 100% 0%)"
+                        
+                        }}
+                        animate={{
+                            position: "fixed",
+                            zIndex: "3",
+                            clipPath: "circle(100% at 100% 50%)",
+                                
+                        }}
+                        transition={{ duration: .4, delay: 0, type: "spring", stiffness:100, damping:15  }}
+                        exit={{
+                            clipPath: "circle(0% at 100% 0%)",
+                            transition: { duration: 0.4, type: "spring", stiffness: 100, damping: 15 },
+                        }}
+                    >
+                        <motion.button
+                            whileHover={{ 
+                                scale: 1.1,
+                                border: "1px solid #ffffff",   
+                                color: "#ffffff",
+                                backgroundColor: "#400161",
+                                boxShadow: "none",                         
+                            }}
+                            whileTap={{ scale: 0.9 }}
+                            onClick={(prev) => setSuccesEmail(!prev) }
+                        >
+                            X
+                        </motion.button>
+                        <h1>Email enviado correctamente !!</h1> 
+                        <img className={styles.alienSticker} src={alienSticker} alt="alienSticker" />    
+                        <img className={styles.alienSticker2} src={alienSticker2} alt="alienSticker" />    
+                    </motion.div>
+                }    
+            </AnimatePresence>
             <div className={styles.appreciationText}>
                 <h1>Cualquier feedback o recomendación es más que bienvenida</h1>
                 <h2>y muchas gracias por mirar mi portfolio ❤️{/*&lt;3 */}</h2>
@@ -141,35 +125,7 @@ function Contactme({setContactmeRef}){
             <div className={styles.formContainer}>
                 <h3>Contacto</h3>
                 <form onSubmit={onSubmit}>                
-                    {/* <AnimatedfieldLabelGroup
-                        children= {
-                            <>                        
-                                <AnimatedInput
-                                    ref= {nameInputRef}
-                                    type="text"
-                                    id= "nombre"
-                                    name= "nombre"
-                                    initial = {{ 
-                                        borderBottom: "none", 
-                                        backgroundColor: "#0000008e",
-                                        pointerEvents: "none" 
-                                    }}
-                                    animate= {
-                                        buttonSeen ? { 
-                                            borderBottom: "",
-                                            backgroundColor: "",
-                                            pointerEvents: ""                               
-                                        }  : 
-                                        {}
-                                    }
-                                />
-                                <AnimatedLabel
-                                    htmlFor= "nombre"
-                                    text= "nombre"
-                                />
-                            </>
-                        }
-                    /> */}
+                    
                     <motion.div className={styles.fieldLabelGroup}
                         initial={{ 
                             marginBottom: 0, 
@@ -231,38 +187,7 @@ function Contactme({setContactmeRef}){
                             {errors.blankName}
                         </motion.div>
                     }
-                    {/* <AnimatedfieldLabelGroup
-                        children={
-                            <>
-                                <AnimatedInput
-                                    ref= {emailInputRef} 
-                                    id= "email"
-                                    name= "email"
-                                    initial = {{ 
-                                        borderBottom: "none", 
-                                        borderTop: "none",
-                                        backgroundColor:"#0000008e",
-                                        pointerEvents: "none" 
-                                    }}
-                                    animate= {
-                                        buttonSeen ? { 
-                                            borderBottom: "",
-                                            borderTop: "",
-                                            backgroundColor: "",
-                                            pointerEvents: ""                               
-                                        }  : 
-                                        {}
-                                    }
-                                    value={email}
-                                    
-                                />
-                                <AnimatedLabel
-                                    htmlFor= "email"
-                                    text= "email"
-                                />
-                            </>
-                        }
-                    /> */}
+                    
                     <motion.div className={styles.fieldLabelGroup}
                             initial={{ 
                                 marginBottom: 0, 
@@ -336,32 +261,7 @@ function Contactme({setContactmeRef}){
                             {errors.invalidEmail}
                         </motion.div>
                     }
-                    {/* <AnimatedfieldLabelGroup
-                        children={
-                            <>
-                                <motion.textarea id="message" placeholder="" name="message" 
-                                    ref= {messageInputRef}
-                                    initial={{ 
-                                        borderBottom: "none",
-                                        borderTop: "none",
-                                        backgroundColor:"#0000008e",
-                                        pointerEvents: "none"
-                                    }}
-                                    animate={buttonSeen ? { 
-                                        borderBottom: "",
-                                        borderTop: "",
-                                        backgroundColor:"",
-                                        pointerEvents: "" 
-                                    }  : {}}                        
-                                    transition={{ duration: 0.3, delay: delayContactme  }}
-                                />
-                                <AnimatedLabel
-                                    htmlFor= "message"
-                                    text= "Tu mensaje"
-                                />
-                            </>                            
-                        }                        
-                    /> */}
+                    
                     <motion.div className={styles.fieldLabelGroup}
                         initial={{ 
                             marginBottom: 0, 
@@ -446,7 +346,7 @@ function Contactme({setContactmeRef}){
                         transition={{ duration: 0.2, delay: delayContactme  }}
                     />
                 </form>
-            </div>            
+            </div>        
         </div>
     )
 }

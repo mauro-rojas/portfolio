@@ -226,4 +226,63 @@
 .fieldLabelGroup:has(> .inputError) {
     margin-bottom: 6px !important;
 }
+
+.succesEmail{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 50vw;
+    position: fixed;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    background-color: #400161;
+}
+
+.succesEmail button{
+    font-family: "PassionOne-Bold";
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    margin: 3.5vw;
+    height: 3vw;
+    min-height: 25px;
+    width: auto;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: #ffffff;        
+    color: #400161;
+    font-size: clamp(12px, 1.3vw, 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.succesEmail h1{
+    color: #ffffff;
+    text-align: center;    
+    text-wrap: balance;
+    font-family: "Alfa-Slab-One";
+    font-size: 4vw;
+    height: 29vh;
+}
+
+.succesEmail .alienSticker{
+    height: 28vh;
+    position: fixed;
+    bottom: 4%;
+    right: 30%;
+    transform: rotate(-10deg);
+}
+
+.succesEmail .alienSticker2{
+    height: 19vh;
+    position: fixed;
+    top: 12%;
+    right: 30%;
+    transform: rotate(0deg);
+    display: none;
+
+}
     

@@ -15,7 +15,7 @@ function LandingPage({ projectsPageRef, contactmeRef}){
     
     const  variants ={
         open: { opacity: 1},
-        closed: { position: "fixed", top: 0, left: 0, opacity: [0,1], zIndex: 4 },
+        closed: { position: "fixed", top: 0, left: 0, opacity: [0,1], zIndex: 4, boxShadow: "none" },
     }
     
     const AnimatedButton = ({text, onClick, variants}) => {
@@ -108,7 +108,7 @@ function LandingPage({ projectsPageRef, contactmeRef}){
                                 transition={{ duration: .4, delay: 0, type: "spring", stiffness:100, damping:15  }}
                             >
                                 <div className={styles.aboutmeText}>
-                                    <h1>Hola a todos!!</h1>
+                                    <h1>Hola a todos !!</h1>
                                     <p>
                                         Soy un estudiante de licenciatura en sistemas aspirante a full stack
                                         developer, me apasiona aprender y mejorar mis habilidades en el
