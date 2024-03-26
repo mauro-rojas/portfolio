@@ -1,0 +1,461 @@
+.projectsBackground{
+    height: 110vw;
+    width: 100vw;
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    background: #4f435c00;
+    background-image: url("../assets/projectsBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.projects{    
+    position: relative;
+    width: 100vw;
+    height: 100vw;      
+}
+
+.projectsCardsContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 30vw;
+    justify-items: center;
+}
+
+.projectsCardsContainer .projectCard:nth-child(1){
+    margin-bottom: 170px;
+}
+
+.projectsCardsContainer .projectCard:nth-child(2){
+    margin-bottom: 170px;
+    transform: translateY(90px);
+}
+
+.projectsCardsContainer .projectCard:nth-child(3 ){
+    margin-bottom: 170px;
+    transform: translateX(30px) ;
+}
+
+.projectsCardsContainer .projectCard:nth-child(4){
+    margin-bottom: 170px;
+    transform: translateY(100px) ;
+}
+
+
+.alienSticker2{
+    height: 11vw;
+    position:absolute;
+    top: 84vw;
+    right: 21vw;
+    transform: rotate(-3deg);
+    z-index: 2;
+}
+
+
+.alienSticker5{
+    height: 16vw;
+    position: absolute;
+    top: 74vw;
+    left: 6vw;
+    transform: rotate(4deg);
+    z-index: 2;
+}
+
+
+.alienSticker7{
+    height: 12vw;
+    position:absolute;
+    top: 79vw;
+    right: 2vw;
+    transform: rotate(-10deg);
+    z-index: 2;
+}
+
+.alienSticker8{
+    height: 9vw;
+    position:absolute;
+    top: 26vw;
+    right: 5vw;
+    transform: rotate(-20deg);
+    z-index: 2;
+}
+
+
+.alienSticker10{
+    height: 16vw;
+    position:absolute;
+    top: 48vw;
+    right: 2vw;    
+    z-index: 2;
+    transform: rotate(5deg);
+}
+
+
+.alienSticker12{
+    height: 7vw;
+    position:absolute;
+    top: 47vw;
+    left: 30vw;
+    transform: rotate(20deg);
+    z-index: 2;
+}
+
+
+.alienSticker14{
+    height: 15vw;
+    position:absolute;
+    top: 48vw;
+    left: 13vw;
+    transform: rotate(-5deg);
+    z-index: 2;
+}
+
+
+.alienSticker17{
+    height: 17vw;
+    position:absolute;
+    top: 35vw;
+    right: 40vw;    
+    z-index: 2;
+}
+
+
+.alienSticker19{
+    height: 13vw;
+    position:absolute;
+    top: 60vw;
+    right: 38vw;
+    transform: rotate(-10deg);
+    z-index: 2;
+}
+
+.alienSticker20{
+    height: 14.5vw;
+    position: absolute;
+    top: 22vw;
+    left: 2vw;
+    transform: rotate(10deg);
+    z-index: 2;
+}
+
+
+.alienSticker24{
+    height: 17vw;
+    position:absolute;
+    top: 85vw;
+    right: 44vw;
+    transform: rotate(-15deg);
+    z-index: -2;
+}
+
+
+.alienSticker28{
+    height: 11vw;
+    position:absolute;
+    top: 77vw;
+    left: 27vw;
+    transform: rotate(-13deg);
+    z-index: 2;
+}
+
+.alienSticker29{
+    height: 13.5vw;
+    position:absolute;
+    top: 19vw;
+    right: 36vw;
+    transform: rotate(-7deg);
+    z-index: 2;
+}
+
+//smartphones
+@media (width <= 650px) {
+    .projects{
+        height: 237vw;
+    }
+
+    .projectsBackground{
+        height: 250vw;
+        width: 200vw;
+        left: -20vw;
+    }
+
+    .projectsCardsContainer{
+        height: 123vw;
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 40vw;
+    }
+
+    .projectsCardsContainer .projectCard:nth-child(1){
+        margin-bottom: 20vw;
+        transform: none
+    }
+    
+    .projectsCardsContainer .projectCard:nth-child(2){
+        margin-bottom: 20vw;
+        transform: none
+    }
+    
+    .projectsCardsContainer .projectCard:nth-child(3 ){
+        margin-bottom: 20vw;
+        transform: none
+    }
+    
+    .projectsCardsContainer .projectCard:nth-child(4){
+        margin-bottom: 20vw;
+        transform: none
+    }
+
+    .alienSticker2{
+        height: 13vw;       
+        top: 160vw;
+        right: 4vw;
+        transform: rotate(-33deg);
+        //verdesin fondo
+    }
+    
+    
+    .alienSticker5{
+        height: 32vw;       
+        top: 94vw;
+        left: 3vw;  
+        transform: rotate(-5deg);     
+        //plantito
+    }
+    
+    
+    .alienSticker7{
+        height: 32vw;
+        top: 189vw;
+        right: 2vw;
+        transform: rotate(0deg);
+        //cabezon alargado
+    }
+    
+    .alienSticker8{
+        height: 12vw;
+        top: 26vw;
+        right: 5vw;
+        transform: rotate(-20deg);
+        //loquin
+    }
+    
+    
+    .alienSticker10{
+        height: 26vw;
+        top: 48vw;
+        right: 0vw;    
+        transform: rotate(5deg);
+        //rosa hojas
+    }
+    
+    
+    .alienSticker12{
+        height: 10vw;
+        top: 24vw;
+        left: 30vw;
+        transform: rotate(20deg);
+        //colorin
+    }
+    
+    
+    .alienSticker14{
+        height: 26vw;
+        top: 54vw;
+        left: 0vw;
+        transform: rotate(-5deg);
+        //aquia
+    }
+    
+    
+    .alienSticker17{
+        height: 21vw;
+        top: 165vw;
+        right: 52vw; 
+        transform: rotate(-15deg);
+        //volador   
+    }
+    
+    
+    .alienSticker19{
+        height: 20vw;
+        top: 87vw;
+        right: 3vw;
+        transform: rotate(-10deg);
+        //tiern
+    }
+    
+    .alienSticker20{
+        height: 25vw;
+        top: 142vw;
+        left: 2vw;
+        transform: rotate(10deg);
+        //crista
+    }
+    
+    
+    .alienSticker24{
+        display: none;
+        //gato
+    }
+    
+    
+    .alienSticker28{
+        height: 19vw;
+        top: 123vw;
+        left: 79vw;
+        transform: rotate(10deg);
+        //neva
+    }
+    
+    .alienSticker29{
+        height: 27vw;
+        top: 205vw;
+        right: 70vw;
+        transform: rotate(-7deg);
+        //yeti
+    }
+}    
+
+//ipads
+@media (750px <= width <= 1024px) and (height >= 1000px){  
+
+    .projects{
+        height: 123vw;
+    }
+
+    .projectsBackground{
+        height: 138vw;
+    }
+
+    .projectsCardsContainer{
+        height: 123vw;
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 25vw;
+    }
+
+    .projectsCardsContainer .projectCard:nth-child(1){
+        margin-bottom: 10vw;
+        transform: translateX(-15vw)
+    }
+    
+    .projectsCardsContainer .projectCard:nth-child(2){
+        margin-bottom: 10vw;
+        transform: translateX(15vw)
+    }
+    
+    .projectsCardsContainer .projectCard:nth-child(3 ){
+        margin-bottom: 10vw;
+        transform: translateX(-15vw)
+    }
+    
+    .projectsCardsContainer .projectCard:nth-child(4){
+        margin-bottom: 10vw;
+        transform: translateX(15vw)
+    }
+
+    .alienSticker2{
+        height: 10vw;
+        top: 74vw;
+        right: 18vw;
+        transform: rotate(-19deg);        
+    }
+    
+    
+    .alienSticker5{
+        height: 26vw;
+        top: 90vw;
+        left: 2vw;
+        transform: rotate(4deg);
+    }
+    
+    
+    .alienSticker7{
+        height: 19vw;
+        top: 97vw;
+        right: 6vw;
+        transform: rotate(5deg);
+    }
+    
+    .alienSticker8{
+        height: 9vw;
+        top: 29vw;
+        right: 12vw;
+        transform: rotate(-20deg);
+    }
+    
+    
+    .alienSticker10{
+        // height: 18vw;
+        // top: 50vw;
+        // right: 2vw;    
+        // transform: rotate(5deg);
+        display: none;
+    }
+    
+    
+    .alienSticker12{
+        height: 7vw;
+        top: 50vw;
+        left: 25vw;
+        transform: rotate(20deg);
+    }
+    
+    
+    .alienSticker14{
+        height: 18vw;
+        top: 62vw;
+        left: 11vw;
+        transform: rotate(-5deg);
+    }
+    
+    
+    .alienSticker17{
+        height: 18vw;
+        top: 38vw;
+        right: 42vw;   
+        transform: rotate(4deg); 
+    }
+    
+    
+    .alienSticker19{
+        height: 17vw;
+        top: 87vw;
+        right: 33vw;
+        transform: rotate(-10deg);
+    }
+    
+    .alienSticker20{
+        height: 20vw;
+        top: 22vw;
+        left: 2vw;
+        transform: rotate(10deg);
+    }
+    
+    
+    .alienSticker24{
+        // height: 18vw;
+        // top: 92vw;
+        // right: 48vw;
+        // transform: rotate(15deg);
+        // z-index: 2;
+        display: none;
+    }
+    
+    
+    .alienSticker28{
+        height: 10vw;
+        top: 122vw;
+        left: 40vw;
+        transform: rotate(-13deg);
+    }
+    
+    .alienSticker29{
+        height: 13.5vw;
+        top: 49vw;
+        right: 4vw;
+        transform: rotate(7deg);
+    }
+
+}

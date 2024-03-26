@@ -1,31 +1,21 @@
-import { useEffect, useRef, useState } from "react"
-import Contactme from "./components/contactmePage/contactme"
-import LandingPage from "./components/landingPage/landingPage"
-import ProjectsPage from "./components/projectsPage/projectsPage"
-
-
-
-
+import { useState } from "react"
+import Contactme from "./components/contactme/contactme.jsx"
+import Presentation from "./components/presentation/presentation.jsx"
+import ProjectsDisplay from "./components/projectsDisplay/projectsDisplay.jsx"
 
 
 export default function HomePage(){
 
-    const[projectsPageRef, setProjectsPageRef] = useState(null);
+    const[projectsDisplayRef, setProjectsDisplayRef] = useState(null);
     const[contactmeRef, setContactmeRef] = useState(null);
-   
-
-    // useEffect(()=>{
-    //     console.log(projectsPageRef);
-    //     console.log(contactmeRef);
-    // },[projectsPageRef, contactmeRef]);
 
     return(
         <>
-            <LandingPage
-                projectsPageRef = {projectsPageRef}
+            <Presentation
+                projectsDisplayRef = {projectsDisplayRef}
                 contactmeRef ={contactmeRef}
             />
-            <ProjectsPage setProjectsPageRef = {setProjectsPageRef} />
+            <ProjectsDisplay setProjectsDisplayRef = {setProjectsDisplayRef} />
             <Contactme setContactmeRef = {setContactmeRef} />            
         </>
     )

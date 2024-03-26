@@ -24,12 +24,12 @@ function App() {
           <Route path="*" element={<HomePage/>}/>
           <Route path="/homePage" element={<HomePage/>}/>
           <Route path="/clima" element={
-            <React.Suspense fallback="">
+            <React.Suspense fallback="" >
               <LazyWeatherApp/>
             </React.Suspense>  
           }/>          
           <Route path="/slimeSavior" element={
-            <React.Suspense fallback="">
+            <React.Suspense fallback="" >
               <LazySlimeSaviorApp/>
             </React.Suspense>
           }/>          

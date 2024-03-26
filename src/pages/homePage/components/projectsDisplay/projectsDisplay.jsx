@@ -1,4 +1,5 @@
-import styles from "../../styles/projectsPage.module.scss"
+import styles from "../../styles/projectsDisplay.module.scss"
+
 
 import weatherProjectView from "../../assets/weatherProjectView.png";
 import slimeSaviorProjectView from "../../assets/slimeSaviorProjectView.png";
@@ -25,16 +26,18 @@ import sassIcon from "../../assets/technologiesIcons/Sass.svg"
 import viteIcon from "../../assets/technologiesIcons/Vite.svg"
 import openweathermapIcon from "../../assets/technologiesIcons/openweathermapIcon.webp"
 
-import ProjectCard from "./projectCard";
+import background from "../../assets/projectsBackground.png"
+
+import ProjectCard from "./components/projectCard";
 import { useEffect, useRef, useState } from "react";
 
 
 
-function ProjectsPage({setProjectsPageRef}){
+function ProjectsPage({setProjectsDisplayRef}){
 
     const [imgRef, setImgRef] = useState([]);
     const [originalAnimationProjectView, setOriginalAnimationProjectView] = useState(null);
-    const projectsPageRef = useRef(null);
+    const projectsDisplayRef = useRef(null);
 
     function syncAnimation(ref, originalAnimation) {
         //asi me aseguro que se guarden bien los valores aunque se rendericen simultaneamente
@@ -72,15 +75,16 @@ function ProjectsPage({setProjectsPageRef}){
     }, [imgRef]);
 
     useEffect(() => {        
-        setProjectsPageRef(projectsPageRef);
+        setProjectsDisplayRef(projectsDisplayRef);
     }, []);
     
 
     return(
-        <div className={styles.projects} ref={projectsPageRef}>            
-                <div className={styles.projectsBackground}>
-                </div>
-                <div className={styles.projectsCardContainer}>
+        <div className={styles.projects} ref={projectsDisplayRef}>            
+                {/* <div className={styles.projectsBackground}>
+                </div> */}
+                <img  className={styles.projectsBackground} src={background} alt="background" />
+                <div className={styles.projectsCardsContainer}>
                     <div className={styles.projectCard}>
                         <ProjectCard 
                             text="Juego de memoria en el que debemos salvar un hermoso slime. "

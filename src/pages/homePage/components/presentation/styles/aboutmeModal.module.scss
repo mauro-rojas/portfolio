@@ -1,0 +1,205 @@
+@font-face {
+    font-family: "PassionOne-Bold";
+    src: url("../../../assets/fonts/PassionOne-Bold.ttf");  
+}
+@font-face {
+    font-family: "NotoSans-SemiBoldItalic";
+    src: url("../../../assets/fonts/NotoSans-SemiBoldItalic.ttf");  
+}
+@font-face {
+    font-family: "Alfa-Slab-One";
+    src: url("../../../assets/fonts/AlfaSlabOne-Regular.ttf");  
+}
+
+
+
+.aboutmeModal{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 60vw;
+}
+
+.aboutmeModal button {    
+    font-family: "PassionOne-Bold";
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    margin: 3.5vw;
+    height: 3vw;
+    min-height: 25px;
+    width: auto;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background: #ffffff;        
+    color: #400161;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alienSticker{
+    height: 12vw;
+    position: fixed;
+    bottom: 3%;
+    left: 36%;
+    transform: rotate(15deg);
+}
+
+.aboutmeText{
+    width: 34vw;
+    text-wrap: balance;
+    margin-left: 6.5vw;
+    
+    
+}
+
+.aboutmeText p{
+    font-family: "NotoSans-SemiBoldItalic";
+    font-size: clamp(10px, 2.3vw, 16px);
+    margin: 17px 20px;
+    color: #ffffff;
+}
+
+.aboutmeText h1{
+    font-family: "Alfa-Slab-One";
+    font-size: 3.5vw;
+    color: #ffffff;
+}
+
+
+
+
+@media (650px < width <= 866px) {
+    .aboutmeModal{
+        width: 150vw;
+        display: unset;
+    }
+
+    .aboutmeText{
+        width: 95vw;
+        margin: 0;
+        margin-top: 20vw;
+        
+        
+    }
+
+    .aboutmeText p{
+        text-align: center;
+        width: 100%;
+        font-size: clamp(10px, 4vw, 19px);
+        margin: 17px 20px;
+    }
+    
+    .aboutmeText h1{
+        width: 100%;
+        text-align: center;
+        font-size: 6vw;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+    .alienSticker{
+        height: 15vw;        
+        left: 76%;   
+        bottom: 4%;     
+    }
+
+    
+}
+
+//smartphones
+@media (width <= 650px) { 
+    .aboutmeModal{
+        width: 140vw;
+        display: unset;
+        
+         
+    }
+
+
+    .aboutmeModal button {
+        height: 8vw; 
+        width: 8vw; 
+        border-radius: 200px;
+        font-size: 4vw;     
+    }
+
+    .alienSticker{
+        height: 25vw;        
+        left: 76%;   
+        bottom: 4%;     
+    }
+
+    .aboutmeText{
+        width: 100dvw;
+        height: 100dvh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .aboutmeText p{
+        text-align: center;
+        width: 100%;
+        font-size: clamp(10px, 4vw, 16px);
+        margin: 17px 20px;
+    }
+    
+    .aboutmeText h1{
+        width: 100%;
+        text-align: center;
+        font-size: 8vw;
+        margin-left: 0;
+        margin-bottom: 50px;
+    }
+
+}
+
+
+//ipads
+@media (750px <= width <= 1024px) and (height >= 1000px){  
+
+    .aboutmeModal{
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .aboutmeModal button {
+        height: 8vw; 
+        width: 8vw; 
+        border-radius: 200px;
+        font-size: 4vw;     
+    }
+
+    .alienSticker{
+        height: 25vw;        
+        left: 76%;   
+        bottom: 2%;     
+    }
+
+    .aboutmeText{
+        width: 80vw;        
+        margin: 0;
+        
+    }
+
+    .aboutmeText p{
+        
+        font-size: 3.4vw;
+        margin: 17px 20px;
+    }
+    
+    .aboutmeText h1{
+        font-size: 7.5vw;
+        margin-left: 20px;
+        margin-bottom: 50px;
+    }
+}
+

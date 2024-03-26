@@ -1,4 +1,4 @@
-import styles from "../../styles/projectCard.module.scss"
+import styles from "../styles/projectCard.module.scss"
 import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
@@ -16,7 +16,7 @@ function ProjectCard ({text, img, linkTo, altImg, technologies, syncAnimation  }
 
     const animateIn = {
         opacity: 1,
-        y: -50
+        y: -37
     };
 
     useEffect(() => {
