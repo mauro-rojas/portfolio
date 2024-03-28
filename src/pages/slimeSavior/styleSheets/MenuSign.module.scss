@@ -12,7 +12,7 @@
 .playAgainContainer{  
     z-index: 21;  
     position: absolute;
-    height: 100vh;
+    height: 100dvh;
     width: 100vw;
     top: 0;
     display: flex;
@@ -58,6 +58,9 @@
  
 
 @media (max-width: 800px) {
+
+
+    
     .playAgainContainer{
         height: 80vh;
         padding: 0;

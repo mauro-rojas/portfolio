@@ -105,7 +105,7 @@ export default function weatherApp (){
                     className = {`${styles.initialBackground} ${lightMode ? styles.lightMode : ""}`} 
                     style={{ backgroundImage: `url(${initialBackground})`}}
                     initial= {{ opacity: 0 }}
-                    animate= { lightMode ? { opacity: 1} : { opacity : 0.05 }}
+                    animate= { lightMode ? { opacity: 1} : { opacity : 0.9 }}
                     transition={{duration: .7}}
                 >
                 </motion.div>

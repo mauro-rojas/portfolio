@@ -11,10 +11,10 @@
 .succesEmail{
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
     position: fixed;
-    z-index: 5;
     bottom: 0;
     right: 0;
     background-color: #400161;
@@ -30,50 +30,106 @@
     height: 3vw;
     min-height: 25px;
     width: auto;
-    padding: 5px 15px;
+    padding: 15px;
     border-radius: 20px;
     background: #ffffff;        
     color: #400161;
-    font-size: clamp(12px, 1.3vw, 30px);
+    font-size: clamp(12px, 1.5vw, 30px);
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 2vw;
+    width: 2vw;
 }
 
 .succesEmail h1{
+    width: 40vw;
+    height: auto;
+    margin: 0;
+    margin-right: 6vw;
     color: #ffffff;
     text-align: center;    
     text-wrap: balance;
     font-family: "Alfa-Slab-One";
-    font-size: 4vw;
-    height: 29vh;
+    font-size: clamp(10px, 4vw, 40px);
 }
 
 .succesEmail .alienSticker{
-    height: 15vw;
+    height: 12vw;    
     position: fixed;
     bottom: 4%;
-    right: 31%;
+    right: 35%;
     transform: rotate(-12deg);
 }
 
-@media (width <= 650px) {
 
+
+@media (650px < width <= 866px) {
     .succesEmail{        
-        width: 100vw;
-        justify-content: center;
+        width: 230vw;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .succesEmail h1{
-        font-size: clamp(10px, 7vw, 30px);
+        width: 100vw;
         height: auto;
         margin: 0;
     }
 
     .succesEmail .alienSticker{
-        height: 40vw;
+        height: 20vw;
         bottom: 6%;
         left: 10%;
         transform: rotate(-12deg);
     }
 }
+
+@media (width <= 650px) {
+    
+    .succesEmail{        
+        width: 250vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .succesEmail h1{
+        font-size: clamp(10px, 7vw, 30px);
+        width: 100vw;
+        height: auto;
+        margin: 0;
+        padding: 0 4vw;
+    }
+
+    .succesEmail .alienSticker{
+        height: 20vw;
+        bottom: 6%;
+        left: 10%;
+        transform: rotate(-12deg);
+    }
+}
+
+@media (750px <= width <= 1024px) and (height >= 1000px){ 
+
+    .succesEmail {
+        width: 250vw;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .succesEmail h1{
+        font-size: clamp(10px, 7vw, 50px);
+        width: 100vw;
+        height: auto;
+        margin: 0 ;
+        padding: 0 2vw;
+    }
+
+    .succesEmail .alienSticker{
+        height: 20vw;
+        bottom: 6%;
+        left: 10%;
+        transform: rotate(-12deg);
+    }
+}
+

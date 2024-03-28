@@ -19,9 +19,9 @@ function EmailSuccesModal ({ succesEmail, setSuccesEmail }){
                 
                 }}
                 animate={{
-                    position: "fixed",
+                    //position: "fixed",
                     zIndex: "3",
-                    clipPath: "circle(100% at 100% 50%)",
+                    clipPath: "circle(68% at 100% 50%)",
                         
                 }}
                 transition={{ duration: .4, delay: 0, type: "spring", stiffness:100, damping:15  }}

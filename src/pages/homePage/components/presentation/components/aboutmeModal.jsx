@@ -13,21 +13,21 @@ function AboutmeModal ({aboutmeOpen , setAboutmeOpen}){
                     aboutmeOpen &&                    
                     <motion.div className={styles.aboutmeModal}
                         initial={{                                   
-                            backgroundColor: "#400161",
-                            position: "fixed",
-                            top: 0,
-                            left: 0,
-                            zIndex:"-2",
+                            // backgroundColor: "#400161",
+                            // position: "fixed",
+                            // top: 0,
+                            // left: 0,
+                            // zIndex:"-2",
                             clipPath: "circle(0% at 0% 0%)"
                             
                         }}
                         animate={
                             aboutmeOpen  ? {
-                                position: "fixed",
-                                top: 0,
-                                left: 0,
-                                zIndex: "3",
-                                clipPath: "circle(90% at 0% 50%)",                                
+                                // position: "fixed",
+                                // top: 0,
+                                // left: 0,
+                                ///zIndex: "3",
+                                clipPath: "circle(68% at 0% 50%)",                                
                             } : 
                             {}
                         }

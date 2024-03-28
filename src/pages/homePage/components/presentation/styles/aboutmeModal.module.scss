@@ -17,7 +17,13 @@
     display: flex;
     align-items: center;
     height: 100vh;
-    width: 60vw;
+    width: 100vw;
+    background-color: #400161;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    clip-path: circle(0% at 0% 0%)
 }
 
 .aboutmeModal button {    
@@ -27,16 +33,17 @@
     top: 0;
     left: 0;
     margin: 3.5vw;
-    height: 3vw;
-    min-height: 25px;
-    width: auto;
-    padding: 5px 15px;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 200px;
     background: #ffffff;        
     color: #400161;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 2vw; 
+    width: 2vw; 
+    font-size: clamp(12px, 1.5vw, 30px);  
+
 }
 
 .alienSticker{
@@ -57,7 +64,7 @@
 
 .aboutmeText p{
     font-family: "NotoSans-SemiBoldItalic";
-    font-size: clamp(10px, 2.3vw, 16px);
+    font-size: clamp(10px, 1.5vw, 23px);
     margin: 17px 20px;
     color: #ffffff;
 }
@@ -73,15 +80,15 @@
 
 @media (650px < width <= 866px) {
     .aboutmeModal{
-        width: 150vw;
-        display: unset;
+        width: 230vw;
+        display: flex;
+        justify-content: flex-start;
     }
 
     .aboutmeText{
         width: 95vw;
         margin: 0;
-        margin-top: 20vw;
-        
+        margin-top: 0;     
         
     }
 
@@ -112,7 +119,7 @@
 //smartphones
 @media (width <= 650px) { 
     .aboutmeModal{
-        width: 140vw;
+        width: 230vw;
         display: unset;
         
          
@@ -165,9 +172,9 @@
 @media (750px <= width <= 1024px) and (height >= 1000px){  
 
     .aboutmeModal{
-        width: 100vw;
+        width: 230vw;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
 
@@ -185,21 +192,31 @@
     }
 
     .aboutmeText{
-        width: 80vw;        
+        width: 100vw;        
         margin: 0;
+        text-align: center;
+        font-size: clamp(10px, 4vw, 16px);
+        
         
     }
 
     .aboutmeText p{
         
         font-size: 3.4vw;
-        margin: 17px 20px;
+        margin: 17px 0px;
     }
     
     .aboutmeText h1{
         font-size: 7.5vw;
-        margin-left: 20px;
+        margin-left: 0px;
         margin-bottom: 50px;
+    }
+
+    .aboutmeModal button {
+        height: 8vw; 
+        width: 8vw; 
+        border-radius: 200px;
+        font-size: 4vw;     
     }
 }
 

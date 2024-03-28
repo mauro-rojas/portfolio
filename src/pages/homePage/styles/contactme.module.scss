@@ -100,7 +100,8 @@
     width: 100%;
     display: flex;
     color: rgb(221, 221, 221);
-    border: 1px solid #ACACAC;        
+    border: 1px solid #ACACAC;   
+    background-color: #3B3B3B;     
     &:focus{
         border: 2px solid #3B6BEE;
         border-radius: 3px;
@@ -122,7 +123,8 @@
     display: flex;
     color: rgb(221, 221, 221);  
     padding-top: 10px; 
-    padding-left: 3px;       
+    padding-left: 3px; 
+    background-color: #3B3B3B;      
     &:focus{
         border: 2px solid #3B6BEE;        
         border-radius: 3px;
