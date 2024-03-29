@@ -63,7 +63,7 @@ function Contactme({setContactmeRef}){
     
     function onSubmit (e) {
         e.preventDefault();       
-        validateBlank(name, "name" , setNameError);
+        validateBlank(name, "nombre" , setNameError);
         validateEmail(email, setEmailError);
         validateBlank(message, "mensaje" , setMessageError);
         if( nameError === null && emailError === null && messageError === null){
