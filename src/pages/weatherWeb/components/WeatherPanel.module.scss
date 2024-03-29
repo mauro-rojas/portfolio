@@ -26,6 +26,7 @@
     //background-color: rgba(180, 67, 184, 0.479);   
     display: flex; 
     justify-content: center;
+    align-items: center;
     width: 42vw;
     min-width: 391px;
     height: 35vh;    
@@ -58,7 +59,7 @@
     .grafico{
         width: 89vw;
         margin-top: 20px;
-        height: 33vh;
+        height: 25vh;
         min-height: auto;
         min-width: auto;
     }
