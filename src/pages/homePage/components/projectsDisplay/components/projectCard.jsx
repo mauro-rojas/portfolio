@@ -38,7 +38,7 @@ function ProjectCard ({text, img, linkTo, altImg, technologies, syncAnimation  }
         <div className={styles.projectCardContainer}>
             <div className={styles.projectCardCoreInfo}>
                 <p>{text}</p>
-                <Link to={linkTo} target='_blank' ref={linkRef} style={{ pointerEvents: 'none' }}>
+                <Link to={linkTo ? linkTo : "#"} target={linkTo ? '_blank' : ''}   ref={linkRef} style={{ pointerEvents: 'none' }}>
                     <motion.img src={img} alt={altImg} ref={imgRef}
                         initial={{ 
                             y: -1000,

@@ -101,7 +101,8 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
             if((guessed.filter((element)=>(element.split("|")[1] !== licuadora && element.split("|")[1] !== hachuela) ).length) === FOODS.length){
                 setTimeout(() => {
                     setWin(true);
-                    setEndGame(true)
+                    setEndGame(true);
+                    FICHAS.sort(() => Math.random() - 0.5);  //mezclo para un nuevo juego
                 }, 1000);
             } 
         }
@@ -111,7 +112,10 @@ export default function MemoGame({curar, dañar, actualHp, setWin, setEndGame}){
     //derrota
     useEffect(()=>{
         if(actualHp === 0){
-            setTimeout(() => setEndGame(true), 1000);
+            setTimeout(() =>{
+                 setEndGame(true);
+                 FICHAS.sort(() => Math.random() - 0.5);  //mezclo para un nuevo juego
+            }, 1000);
         }                    
    }, [actualHp]);
 
