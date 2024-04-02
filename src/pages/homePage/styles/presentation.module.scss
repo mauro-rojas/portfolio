@@ -101,7 +101,7 @@
     }
 
     .presentationText{
-        height: 73dvh;
+        height: 73vh;
         width: 100dvw;
         margin-left: 0;
         h1{
@@ -115,7 +115,8 @@
     .buttonsContainer{
         button{
             height: auto;
-            font-size: clamp(10px, 2.5vw, 30px);
+            font-size: clamp(10px, 3vw, 30px);
+            
             
         }
     }
