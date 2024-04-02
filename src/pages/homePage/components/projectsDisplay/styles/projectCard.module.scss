@@ -103,13 +103,13 @@
     .projectCardCoreInfo p {
         width: 25vw;
         max-height: 22vw;
-        font-size: clamp(11px, 1.3vw, 15px);
+        font-size: clamp(10px, 1.3vw, 15px);
         margin: 0;
-        margin-bottom: 15px;
+        margin-bottom: 4vw;
     }
 
     .technologies{      
-        transform: translateY(-6vw);
+        transform: translateY(-7vw);
     }
     
     .technologies img{    
