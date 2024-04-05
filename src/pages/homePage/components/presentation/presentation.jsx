@@ -38,7 +38,7 @@ function Presentation({ projectsDisplayRef, contactmeRef }){
     return (    
         <>  
             <div className={styles.presentationContainer}>
-                <img className={styles.presentationBackground} src={presentationBackground}  loading="lazy" alt="background" />  
+                <img className={styles.presentationBackground} src={presentationBackground} alt="background" />  
                 <AboutmeModal
                     aboutmeOpen = {aboutmeOpen} 
                     setAboutmeOpen = {setAboutmeOpen}
