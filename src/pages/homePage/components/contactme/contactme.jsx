@@ -86,7 +86,7 @@ function Contactme({setContactmeRef}){
     return(
         <div className={styles.contactMeContainer} ref={contactmeRef}>            
             
-            <img className={styles.contactmeBackground} src={background} alt="contactmeBackground" />            
+            <img className={styles.contactmeBackground} src={background} loading="lazy" alt="contactmeBackground" />            
                 
             <EmailSuccesModal
                 succesEmail={succesEmail}

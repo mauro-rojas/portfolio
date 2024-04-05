@@ -138,19 +138,19 @@ function ProjectsPage({setProjectsDisplayRef}){
                         />
                     </div>
                 </div>                
-                <img className={styles.alienSticker2} src={alienSticker2} alt="alienSticker" />
-                <img className={styles.alienSticker5} src={alienSticker5} alt="alienSticker" />
-                <img className={styles.alienSticker7} src={alienSticker7} alt="alienSticker" />
-                <img className={styles.alienSticker8} src={alienSticker8} alt="alienSticker" />
-                <img className={styles.alienSticker10} src={alienSticker10} alt="alienSticker" />
-                <img className={styles.alienSticker12} src={alienSticker12} alt="alienSticker" />
-                <img className={styles.alienSticker14} src={alienSticker14} alt="alienSticker" />
-                <img className={styles.alienSticker17} src={alienSticker17} alt="alienSticker" />
-                <img className={styles.alienSticker19} src={alienSticker19} alt="alienSticker" />
-                <img className={styles.alienSticker20} src={alienSticker20} alt="alienSticker" />
-                <img className={styles.alienSticker24} src={alienSticker24} alt="alienSticker" />
-                <img className={styles.alienSticker28} src={alienSticker28} alt="alienSticker" />
-                <img className={styles.alienSticker29} src={alienSticker29} alt="alienSticker" />            
+                <img className={styles.alienSticker2} src={alienSticker2} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker5} src={alienSticker5} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker7} src={alienSticker7} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker8} src={alienSticker8} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker10} src={alienSticker10} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker12} src={alienSticker12} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker14} src={alienSticker14} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker17} src={alienSticker17} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker19} src={alienSticker19} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker20} src={alienSticker20} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker24} src={alienSticker24} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker28} src={alienSticker28} loading="lazy" alt="alienSticker" />
+                <img className={styles.alienSticker29} src={alienSticker29} loading="lazy" alt="alienSticker" />            
         </div>
     )
 }
