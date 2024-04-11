@@ -14,147 +14,262 @@
     src: url("../assets/fonts/NotoSans-SemiBoldItalic.ttf");  
 }
 
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../assets/fonts/Montserrat-Regular.ttf");  
+}
+
+
+// .presentationContainer{  
+//     position: relative;
+//     width: 100vw;
+//     height: 90vw;    
+// }
+
+// .presentationBackground{
+//     width: 100vw;
+//     height: 100vw;
+//     position: absolute;
+//     z-index: -2;
+    
+// }
+
+// .presentationText{      
+//     font-family: "Alfa-Slab-One"; 
+//     height: 57vw;
+//     width: 55dvw;
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     justify-content: center;    
+//     color: rgb(255, 255, 255); 
+//     text-shadow: 4px 4px 10px rgb(40, 0, 85);
+//     h1, h2{
+//         letter-spacing: 1px;
+//         margin: 0;
+//         padding: 0;
+//     }
+//     h1{
+//         font-size: 4.5vw;
+//         line-height: 1;
+//     }
+//     h2{
+//         font-size: 2.3vw;
+//     }
+// }
+
+// .subtitle{
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     margin-top: 2vh;
+// }
+
+// .buttonsContainer{
+//     font-family: "PassionOne-Bold";  
+//     display: flex;
+//     justify-content: center;  
+//     align-items: center;
+//     width: 100vw;
+//     margin-top: 10vw;
+//     button{
+//         margin: 3.5vw;
+//         height: 3vw;
+//         min-height: 25px;
+//         width: auto;
+//         padding: 5px 15px;
+//         border-radius: 200px;
+//         background: #ffffff;        
+//         color: #400161;
+//         box-shadow: -2px 4px 10px black;
+//         font-size: clamp(10px, 1.8vw, 20px);
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+        
+//     }
+    
+// }
+
+// //smartphones
+// @media (width <= 650px) {  
+
+//     .presentationContainer{
+        
+//         height: 220vw ;
+//     }
+
+//     .presentationBackground{
+//         width: 300vw;
+//         height: 240vw;
+//         right: -150vw;
+//     }
+
+//     .presentationText{
+//         height: 73vh;
+//         width: 100dvw;
+//         margin-left: 0;
+//         h1{
+//             font-size: 8.5vw;
+//         }
+//         h2{
+//             font-size: 4.9vw;
+//         }
+//     }
+
+//     .buttonsContainer{
+//         button{
+//             height: auto;
+//             font-size: clamp(10px, 3vw, 30px);
+            
+            
+//         }
+//     }
+
+// }
+
+// //ipads
+// @media (750px <= width <= 1024px) and (height >= 1000px){  
+
+//     .presentationContainer{
+        
+//         height: 120vh ;
+//     }
+
+//     .presentationBackground{
+//         width: 200vw;
+//         height: 133vh;
+//         right: -73vw;
+//     }
+
+//     .presentationText{
+//         height: 79dvh;
+//         margin-left: 33px;
+//         h1{
+//             font-size: 6.5vw;
+//         }
+//         h2{
+//             font-size: 3.9vw;
+//         }
+//     }
+
+//     .buttonsContainer{
+//         button{
+//             height: auto;
+//             font-size: clamp(10px, 3.5vw, 30px);
+            
+//         }
+//     }
+// }
+
+  
+
+
+
+
 
 .presentationContainer{  
     position: relative;
     width: 100vw;
-    height: 90vw;    
+    height: 47vw;  
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
-.presentationBackground{
+.presentationBackground2{
     width: 100vw;
-    height: 100vw;
+    height: 47vw;
     position: absolute;
-    z-index: -2;
-    
 }
 
-.presentationText{      
-    font-family: "Alfa-Slab-One"; 
-    height: 57vw;
-    width: 55dvw;
+.floatingMainInfoContainer{
+    height: 35vw;
+    width: 65vw;
+    position: absolute;
+    //background-color: #2d42478a;
+    background:  
+        radial-gradient(at center, #2f4b4e57 , #00191b ),
+        linear-gradient(to bottom, #2f4b4e00 , #00191bab )
+    ;
+    border-radius: 10px;
+    border: 2px solid #6f8889;
+    box-shadow: 0px 0px 10px #6f8889;
+    backdrop-filter: blur(1px);
+    transform-style: preserve-3d;
+    transition: transform 0s ease-in-out;
+}
+
+.logoContainer{
+    height: 69%;
+    //background-color: rgba(0, 136, 255, 0.322);
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;    
-    color: rgb(255, 255, 255); 
-    text-shadow: 4px 4px 10px rgb(40, 0, 85);
-    h1, h2{
-        letter-spacing: 1px;
+    justify-content: center;
+}
+
+.logo{
+    height: auto;
+    width: 85%;
+    margin-top: 2vw;
+}
+
+.aboutmeTextContainer{
+    display: flex;
+    //background-color: #e5f83c52;
+    justify-content: space-between;
+    height: 22%;
+    p{
+        font-family: "Montserrat-Regular";
+        height: 100%;
+        width: 50%;
+        max-width: 50%;        
+        padding: 0 1.6vw;
         margin: 0;
-        padding: 0;
+        text-align: center;
+        text-wrap: balance;
+        font-size: clamp(5px, 0.95vw, 20px);        
+        align-content: center;
+        color: #eeede1;
+        //background-color: #151d2075;
     }
-    h1{
-        font-size: 4.5vw;
-        line-height: 1;
-    }
-    h2{
-        font-size: 2.3vw;
+    & p:nth-child(2) {
+        border-left: 2px solid #e2e0cd;
     }
 }
 
-.subtitle{
+.contactmeButtonContainer{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2vh;
-}
-
-.buttonsContainer{
-    font-family: "PassionOne-Bold";  
-    display: flex;
-    justify-content: center;  
-    align-items: center;
-    width: 100vw;
-    margin-top: 10vw;
+    justify-content: center;
+    height: 8.8%;
+    width: 100%;
+    //background-color: #0a767e7c;
+    position: relative;
     button{
-        margin: 3.5vw;
-        height: 3vw;
-        min-height: 25px;
-        width: auto;
-        padding: 5px 15px;
-        border-radius: 200px;
-        background: #ffffff;        
-        color: #400161;
-        box-shadow: -2px 4px 10px black;
-        font-size: clamp(10px, 1.8vw, 20px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        background-color: transparent;
+        width: 15vw;
+        height: 100%;
+        text-align: center;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1; 
+        transition: transform 0.3s ease-in-out;  
+        border: none;
+        font-size: clamp(5px, 1.3vw, 22px);
+        align-content: center;
+        &:hover{
+            transform: scale(1.05) translateY(-0.1vw);
+            &+ .trapecio{
+                transform: scale(1.05) translateY(-0.1vw);                
+            }
+        }     
         
     }
-    
-}
-
-//smartphones
-@media (width <= 650px) {  
-
-    .presentationContainer{
-        
-        height: 220vw ;
-    }
-
-    .presentationBackground{
-        width: 300vw;
-        height: 240vw;
-        right: -150vw;
-    }
-
-    .presentationText{
-        height: 73vh;
-        width: 100dvw;
-        margin-left: 0;
-        h1{
-            font-size: 8.5vw;
-        }
-        h2{
-            font-size: 4.9vw;
-        }
-    }
-
-    .buttonsContainer{
-        button{
-            height: auto;
-            font-size: clamp(10px, 3vw, 30px);
-            
-            
-        }
-    }
-
-}
-
-//ipads
-@media (750px <= width <= 1024px) and (height >= 1000px){  
-
-    .presentationContainer{
-        
-        height: 120vh ;
-    }
-
-    .presentationBackground{
-        width: 200vw;
-        height: 133vh;
-        right: -73vw;
-    }
-
-    .presentationText{
-        height: 79dvh;
-        margin-left: 33px;
-        h1{
-            font-size: 6.5vw;
-        }
-        h2{
-            font-size: 3.9vw;
-        }
-    }
-
-    .buttonsContainer{
-        button{
-            height: auto;
-            font-size: clamp(10px, 3.5vw, 30px);
-            
-        }
+    .trapecio{
+        width: 15vw;
+        height: 103%;
+        position: absolute;    
+        transition: transform 0.3s ease-in-out;    
     }
 }
 
-  
